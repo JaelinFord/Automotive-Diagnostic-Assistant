@@ -14,5 +14,9 @@
   {
     "issue": "no_start",
     "result": "Battery voltage may be low. Test battery and replace if necessary."
+  },
+  {
+    "issue": "no_start",
+    "result": "Ignition system failure. Check spark plugs and ignition coils."
   }
 ]
