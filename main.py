@@ -12,7 +12,7 @@ def log_case(issue, result):
     try:
         with open("cases.json", "r") as f:
             data = json.load(f)
-    except:
+    except FileNotFoundError:
         data = []
 
     data.append(case)
