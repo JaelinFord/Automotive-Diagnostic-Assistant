@@ -1,4 +1,5 @@
 from diagnostics import diagnostics
+from obd_codes import obd_codes
 
 import json
 
@@ -18,6 +19,27 @@ def log_case(issue, result):
 
     with open("cases.json", "w") as f:
         json.dump(data, f, indent=2)
+
+def lookup_obd_code():
+    code = input("Enter OBD-II code (e.g., P0300): ").upper()
+
+    if code in obd_codes:
+        data = obd_codes[code]
+
+        print("\n=== OBD-II DIAGNOSTIC ===")
+        print(f"Code: {code}")
+        print(f"Description: {data['description']}")
+
+        print("\nPossible Causes:")
+        for cause in data["causes"]:
+            print(f"- {cause}")
+
+        print("\nRecommended Actions:")
+        for action in data["actions"]:
+            print(f"- {action}")
+    else:
+        print("\nCode not found in database.")
+        print("Further diagnostics required. Escalate to Level 2 support.")
 
 def run_diagnostic(start):
     current = start
@@ -47,6 +69,7 @@ def main():
     print("Select issue:")
     print("1. Car won't start")
     print("2. Check engine light")
+    print("3. Enter OBD-II code")
 
     choice = input("Enter choice: ")
 
@@ -54,6 +77,8 @@ def main():
         run_diagnostic("no_start")
     elif choice == "2":
         run_diagnostic("check_engine_light")
+    elif choice == "3":
+        lookup_obd_code()
     else:
         print("Invalid choice.")
 
