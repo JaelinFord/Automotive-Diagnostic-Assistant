@@ -13,6 +13,7 @@ This tool is designed to replicate how dealership technicians and support specia
 * Simulates real automotive diagnostic workflows
 * Case logging system for tracking issues and resolutions
 * Handles incomplete data and escalation scenarios
+* Supports multiple diagnostic scenarios (e.g., no-start, check engine light)
 
 ## 🛠️ Technologies Used
 

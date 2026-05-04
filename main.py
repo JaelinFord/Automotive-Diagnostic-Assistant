@@ -46,11 +46,14 @@ def main():
     print("Automotive Diagnostic Assistant\n")
     print("Select issue:")
     print("1. Car won't start")
+    print("2. Check engine light")
 
     choice = input("Enter choice: ")
 
     if choice == "1":
         run_diagnostic("no_start")
+    elif choice == "2":
+        run_diagnostic("check_engine_light")
     else:
         print("Invalid choice.")
 
