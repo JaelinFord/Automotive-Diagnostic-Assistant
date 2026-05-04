@@ -1,0 +1,18 @@
+[
+  {
+    "issue": "no_start",
+    "result": "Issue unclear. Further diagnostics required. Escalate to Level 2 support."
+  },
+  {
+    "issue": "no_start",
+    "result": "Starter motor may be faulty. Inspect starter and connections."
+  },
+  {
+    "issue": "no_start",
+    "result": "Fuel pump may not be working. Check fuel pump and relay."
+  },
+  {
+    "issue": "no_start",
+    "result": "Battery voltage may be low. Test battery and replace if necessary."
+  }
+]
